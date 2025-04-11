@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    line-height: 1.6;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(219, 58, 112, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1500;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Home Section */
+#home {
+    padding: 80px 20px 40px; /* Added padding for mobile */
+}
+
+#home h1 {
+    font-size: 2.5rem; /* Smaller for mobile */
+    font-weight: 900;
+    color: #125bad;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite, colorChange 5s infinite;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px; /* Smaller for mobile */
+    height: 150px; /* Smaller for mobile */
+    margin: 20px 0;
+    box-shadow: 0 15px 25px rgba(9, 205, 240, 0.979);
+    animation: spin 10s linear infinite;
+}
+
+.encouragement {
+    font-size: 1.2rem;
+    font-weight: 700; /* Bold */
+    color: #555;
+    animation: fadeIn 2s ease-in-out, colorChange 5s infinite;
+}
+
+/* About Me Section */
+#about {
+    padding: 40px 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    border-radius: 50px;
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Limit size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(14, 148, 236, 0.801);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* My Skills Section */
+#skills {
+    padding: 40px 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for mobile */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: rgba(3, 238, 247, 0.911);
+    padding: 15px;
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgba(39, 4, 236, 0.966);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill i {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+    animation: colorChange 5s infinite;
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    font-weight: 700; /* Bold */
+    color: #333;
+    animation: colorChange 5s infinite;
+}
+
+.skill p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #080707;
+}
+
+/* Donation Section */
+#donate { 
+    padding: 40px 20px;
+}
+
+.donation-details {
+    background: rgba(118, 235, 103, 0.938);
+    padding: 15px;
+    border-radius: 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#donate p {
+    font-size: 1rem;
+    font-weight: 700; /* Bold */
+    color: #555;
+    animation: colorChange 5s infinite;
+}
+
+/* Thank You Section */
+#thankyou {
+    padding: 40px 20px;
+}
+
+#thankyou p {
+    font-size: 1.2rem;
+    font-weight: 700; /* Bold */
+    line-height: 1.6;
+    max-width: 90%; /* Adjusted for mobile */
+    margin: 0 auto;
+    animation: colorChange 5s infinite;
+}
+
+/* Footer */
+footer {
+    background: rgba(41, 201, 241, 0.932);
+    padding: 15px;
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: colorChange 5s infinite;
+}
+
+.social-media a:hover {
+    color: #007BFF;
+    transform: translateY(-2px);
+}
+
+/* Balloon Decorations */
+.balloon {
+    position: absolute;
+    width: 50px; /* Smaller for mobile */
+    height: 80px; /* Smaller for mobile */
+    background: #ff6f61;
+    border-radius: 50%;
+    animation: floatBalloon 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2rem; /* Smaller for mobile */
+    }
+
+    .profile-photo {
+        width: 120px; /* Smaller for mobile */
+        height: 120px; /* Smaller for mobile */
+    }
+
+    .encouragement {
+        font-size: 1rem; /* Smaller for mobile */
+    }
+
+    .gallery img {
+        max-width: 200px; /* Smaller for mobile */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted for mobile */
+        gap: 10px; /* Smaller gap for mobile */
+    }
+
+    .skill i {
+        font-size: 1.5rem; /* Smaller for mobile */
+    }
+
+    .skill h3 {
+        font-size: 1rem; /* Smaller for mobile */
+    }
+
+    .skill p {
+        font-size: 0.9rem; /* Smaller for mobile */
+    }
+
+    #thankyou p {
+        font-size: 1rem; /* Smaller for mobile */
+    }
+
+    .social-media a {
+        font-size: 1rem; /* Smaller for mobile */
+    }
+}
